@@ -7,12 +7,12 @@
 #
 Summary:	A library for access to RESTful web services
 Name:		rest
-Version:	0.7.7
+Version:	0.7.8
 Release:	1
 License:	LGPL v2
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	96fbc76e7192784579bed003a31cadbb
+# Source0-md5:	467f0d47bfd7ff353132d17b69ab1830
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11

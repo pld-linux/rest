@@ -7,22 +7,24 @@
 #
 Summary:	A library for access to RESTful web services
 Name:		rest
-Version:	0.7.10
+Version:	0.7.11
 Release:	1
 License:	LGPL v2
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	f47850d26bfb6148d1a3db9e74426e20
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.7/%{name}-%{version}.tar.xz
+# Source0-md5:	ec03b0f471068672ccd7f0d66e34ff55
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	glib2-devel >= 1:2.18.0
+BuildRequires:	glib2-devel >= 1:2.22.0
 BuildRequires:	gobject-introspection-devel >= 0.6.7
 BuildRequires:	gtk-doc >= 1.13
 BuildRequires:	libsoup-gnome-devel >= 2.26.0
 BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +42,7 @@ Summary:	Header files for rest library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki rest
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.18.0
+Requires:	glib2-devel >= 1:2.22.0
 Requires:	libsoup-devel >= 2.26.0
 Requires:	libxml2-devel
 
@@ -106,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_libdir}/librest-%{apiver}.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/librest-%{apiver}.so.0
 %attr(755,root,root) %{_libdir}/librest-extras-%{apiver}.so.*.*.*

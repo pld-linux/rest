@@ -7,12 +7,12 @@
 #
 Summary:	A library for access to RESTful web services
 Name:		rest
-Version:	0.7.11
+Version:	0.7.12
 Release:	1
 License:	LGPL v2
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.7/%{name}-%{version}.tar.xz
-# Source0-md5:	ec03b0f471068672ccd7f0d66e34ff55
+# Source0-md5:	dc14e0d89d38af5d8d544ce8f124d186
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
@@ -88,7 +88,8 @@ Dokumentacja API biblioteki rest.
 	--disable-silent-rules \
 	%{__enable_disable apidocs gtk-doc} \
 	%{__enable_disable static_libs static} \
-	--with-html-dir=%{_gtkdocdir}
+	--with-html-dir=%{_gtkdocdir} \
+	--with-ca-certificates=/etc/certs/ca-certificates.crt
 %{__make}
 
 %install

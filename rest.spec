@@ -6,6 +6,7 @@
 %define		apiver	0.7
 #
 Summary:	A library for access to RESTful web services
+Summary(pl.UTF-8):	Biblioteka dostępu do REST-owych serwisów WWW
 Name:		rest
 Version:	0.7.12
 Release:	1
@@ -28,14 +29,22 @@ BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A library for access to RESTful web services This library was designed
-to make it easier to access web services that claim to be "RESTful". A
-RESTful service should have urls that represent remote objects, which
-methods can then be called on. The majority of services don't actually
-adhere to this strict definition. Instead, their RESTful end point
-usually has an API that is just simpler to use compared to other types
-of APIs they may support (XML-RPC, for instance). It is this kind of
-API that this library is attempting to support.
+This library was designed to make it easier to access web services
+that claim to be "RESTful". A RESTful service should have URLs that
+represent remote objects, which methods can then be called on. The
+majority of services don't actually adhere to this strict definition.
+Instead, their RESTful end point usually has an API that is just
+simpler to use compared to other types of APIs they may support
+(XML-RPC, for instance). It is this kind of API that this library is
+attempting to support.
+
+%description -l pl.UTF-8
+Ta biblioteka została zaprojektowana, aby ułatwić dostęp do serwisów
+WWW, które uznają się za "REST-owe". Serwis REST-owy powinien mieć
+URL-e reprezentujące zdalne obiekty, na których można wywoływać
+metody. Większość serwisów nie jest w pełni zgodna z tą definicją, ale
+ich REST-owy interfejs zwykle ma API prostsze od innych (np. XML-RPC).
+Ten rodzaj API próbuje obsłużyć ta biblioteka.
 
 %package devel
 Summary:	Header files for rest library

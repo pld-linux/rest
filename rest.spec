@@ -17,16 +17,16 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.7/%{name}-%{version}.tar.
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	glib2-devel >= 1:2.22.0
+BuildRequires:	glib2-devel >= 1:2.24
 BuildRequires:	gobject-introspection-devel >= 0.6.7
 BuildRequires:	gtk-doc >= 1.13
 BuildRequires:	libsoup-gnome-devel >= 2.26.0
 BuildRequires:	libtool >= 2:2.2.6
-BuildRequires:	libxml2-devel
+BuildRequires:	libxml2-devel >= 2
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	glib2 >= 1:2.22.0
+Requires:	glib2 >= 1:2.24
 Requires:	libsoup-gnome >= 2.26.0
 Suggests:	ca-certificates
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -54,9 +54,9 @@ Summary:	Header files for rest library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki rest
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.22.0
+Requires:	glib2-devel >= 1:2.24
 Requires:	libsoup-devel >= 2.26.0
-Requires:	libxml2-devel
+Requires:	libxml2-devel >= 2
 
 %description devel
 Header files for rest library.
@@ -121,7 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS README
 %attr(755,root,root) %{_libdir}/librest-%{apiver}.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/librest-%{apiver}.so.0
 %attr(755,root,root) %{_libdir}/librest-extras-%{apiver}.so.*.*.*

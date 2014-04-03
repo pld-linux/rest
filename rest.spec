@@ -2,14 +2,13 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 %bcond_without	static_libs	# don't build static libraries
-#
+
 %define		apiver	0.7
-#
 Summary:	A library for access to RESTful web services
 Summary(pl.UTF-8):	Biblioteka dostępu do REST-owych serwisów WWW
 Name:		rest
 Version:	0.7.91
-Release:	1
+Release:	2
 License:	LGPL v2
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.7/%{name}-%{version}.tar.xz
@@ -80,6 +79,9 @@ Statyczna biblioteka rest.
 Summary:	rest API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki rest
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for rest library.
@@ -106,7 +108,6 @@ Dokumentacja API biblioteki rest.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 

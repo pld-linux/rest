@@ -7,13 +7,14 @@
 Summary:	A library for access to RESTful web services
 Summary(pl.UTF-8):	Biblioteka dostępu do REST-owych serwisów WWW
 Name:		rest
+# keep 0.8.x here, for >= 0.9.0 see rest1.spec
 Version:	0.8.1
 Release:	1
 License:	LGPL v2
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/rest/0.8/%{name}-%{version}.tar.xz
+Source0:	https://download.gnome.org/sources/rest/0.8/%{name}-%{version}.tar.xz
 # Source0-md5:	ece4547298a81105f307369d73c21b9d
-URL:		http://www.gnome.org/
+URL:		https://www.gnome.org/
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	glib2-devel >= 1:2.24
@@ -23,6 +24,7 @@ BuildRequires:	libsoup-gnome-devel >= 2.26.0
 BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	libxml2-devel >= 2
 BuildRequires:	pkgconfig
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.24

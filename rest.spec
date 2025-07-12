@@ -9,7 +9,7 @@ Summary(pl.UTF-8):	Biblioteka dostępu do REST-owych serwisów WWW
 Name:		rest
 # keep 0.8.x here, for >= 0.9.0 see rest1.spec
 Version:	0.8.1
-Release:	1
+Release:	2
 License:	LGPL v2
 Group:		Libraries
 Source0:	https://download.gnome.org/sources/rest/0.8/%{name}-%{version}.tar.xz
